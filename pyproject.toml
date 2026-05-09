@@ -1,6 +1,6 @@
 [project]
 name = "nonebot-plugin-fakemsg-next"
-version = "0.1.0"
+version = "0.2.0"
 description = "使用显式命令触发的合并转发伪造消息插件"
 readme = "README.md"
 requires-python = ">=3.11"

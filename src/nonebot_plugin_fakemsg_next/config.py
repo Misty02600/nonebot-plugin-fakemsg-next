@@ -1,14 +1,14 @@
-from nonebot import get_driver, get_plugin_config
-from pydantic import BaseModel
+from nonebot.plugin import get_plugin_config
+from pydantic import BaseModel, Field
 
 
 class Config(BaseModel):
-    pass
+    fakemsg_next_quick_separator: str = Field(
+        default="|",
+        min_length=1,
+        max_length=1,
+        description="多条伪造消息的分隔符，必须是单个字符。",
+    )
 
 
-# 配置加载
-plugin_config: Config = get_plugin_config(Config)
-global_config = get_driver().config
-
-# 全局名称
-NICKNAME: str = next(iter(global_config.nickname), "")
+plugin_config = get_plugin_config(Config)

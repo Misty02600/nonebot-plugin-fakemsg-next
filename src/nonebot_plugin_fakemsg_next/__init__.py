@@ -1,20 +1,16 @@
-# from nonebot import logger, require
-from nonebot.plugin import PluginMetadata  # , inherit_supported_adapters
+from nonebot.plugin import PluginMetadata
 
-# require("nonebot_plugin_uninfo")
-# require("nonebot_plugin_alconna")
-# require("nonebot_plugin_localstore")
-# require("nonebot_plugin_apscheduler")
 from .config import Config
 
 __plugin_meta__ = PluginMetadata(
-    name="名称",
-    description="描述",
-    usage="用法",
-    type="application",  # application: 功能性插件 | library: 库插件
+    name="伪造消息 Next",
+    description="使用显式命令触发的合并转发伪造消息插件。",
+    usage="伪造消息 @用户说ping|@用户说pong",
+    type="application",
     homepage="https://github.com/Misty02600/nonebot-plugin-fakemsg-next",
     config=Config,
-    # supported_adapters=inherit_supported_adapters("nonebot_plugin_alconna"),
     supported_adapters={"~onebot.v11"},
-    extra={"author": "Misty02600 <your@mail.com>"},
+    extra={"author": "Misty02600"},
 )
+
+from . import handlers as handlers

@@ -1,19 +1,13 @@
 [project]
 name = "nonebot-plugin-fakemsg-next"
 version = "0.1.0"
-description = "插件描述"
+description = "使用显式命令触发的合并转发伪造消息插件"
 readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "Misty02600", email = "Misty02600@gmail.com" }]
 dependencies = [
-  # "httpx>=0.27.0,<1.0.0",
-  # "nonebot-plugin-alconna>=0.60.0,<1.0.0",    # 跨平台命令解析拓展
-  # "nonebot-plugin-apscheduler>=0.5.0,<1.0.0", # 定时任务
-  # "nonebot-plugin-localstore>=0.7.4,<1.0.0",  # 存储文件
-  # "nonebot-plugin-uninfo>=0.10.0,<1.0.0",     # 多平台用户信息获取
-  # "nonebot-adapter-onebot>=2.4.6,<3.0.0",
+  "nonebot-adapter-onebot>=2.4.6,<3.0.0",
   "nonebot2>=2.4.2,<3.0.0",
-
 ]
 
 [project.urls]
@@ -31,7 +25,6 @@ dev = [
 test = [
   "basedpyright>=1.16.0",
   "ruff>=0.14.13,<1.0.0",
-  "nonebot-adapter-onebot>=2.4.6,<3.0.0",
   "nonebot2[fastapi]>=2.4.4,<3.0.0",
   "nonebug>=0.4.3,<1.0.0",
   "pytest-asyncio>=1.3.0,<1.4.0",
